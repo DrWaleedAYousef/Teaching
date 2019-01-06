@@ -1,0 +1,47 @@
+01	 Introduction
+
+02.      Concepts: Encapsulation and ADT
+
+03.      Stacks: Array-based implementation I
+
+04.      Stacks: Array-based implementation II
+
+05.      Stacks: Array-based implementation III
+
+06.      Stacks: Linked-based implementation I
+
+07.      Stacks: Linked-based implementation II
+
+08.      Stacks applications: Recursion
+
+09.      Stacks applications: Polish Notation
+
+10.      Queues: Array-based implementation
+
+11.      Queues: Linked-based implementation
+
+12.      Abstraction & Implementation-Related Issues
+
+13.      Lists: Array-based implementation
+
+14.      Lists: Linked-based implementation
+
+15.      Search and Analysis of Algorithms
+
+16.      Analysis of Binary Search Algorithm I
+
+17.      Analysis of Binary Search Algorithm II
+
+18.      Trees
+
+19.      Binary Search Trees I
+
+20.      Binary Search Trees II
+
+21.      Introduction to Graphs
+
+A1.      Analysis of Algorithms I
+
+A2.      Analysis of Algorithms II
+
+A3.      Analysis of Algorithms III

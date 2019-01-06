@@ -1,0 +1,742 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     30158,        732]
+NotebookOptionsPosition[     29016,        690]
+NotebookOutlinePosition[     29679,        715]
+CellTagsIndexPosition[     29636,        712]
+WindowFrame->Normal
+ContainsDynamic->True *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["The Bivariate Normal and Conditional Distributions", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1: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
+FP/69esnAAAAAAAAAAAAwM74B4thROM=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Grid", "[", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Plot3D", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "Pi", "*", "sigmax", "*", "sigmay", "*", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "-", 
+               RowBox[{"rho", "^", "2"}]}], "]"}]}], ")"}]}], "*", 
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "1"}], "/", 
+             RowBox[{"(", 
+              RowBox[{"2", "*", 
+               RowBox[{"(", 
+                RowBox[{"1", "-", 
+                 RowBox[{"rho", "^", "2"}]}], ")"}]}], ")"}]}], "*", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"x", "-", "mux"}], ")"}], "^", "2"}], "/", 
+               RowBox[{"sigmax", "^", "2"}]}], "+", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"y", "-", "muy"}], ")"}], "^", "2"}], "/", 
+               RowBox[{"sigmay", "^", "2"}]}], "-", 
+              RowBox[{"2", "*", "rho", "*", 
+               RowBox[{"(", 
+                RowBox[{"x", "-", "mux"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"y", "-", "muy"}], ")"}], "/", 
+                RowBox[{"(", 
+                 RowBox[{"sigmax", "*", "sigmay"}], ")"}]}]}]}], ")"}]}], 
+           "]"}]}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", " ", 
+         "\[IndentingNewLine]", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "y", ",", "None"}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Boxed", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"BoxRatios", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", "2", ",", "1"}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PlotLabel", "\[Rule]", "\"\<bivariate normal density\>\""}],
+          ",", "\[IndentingNewLine]", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"1", "/", 
+             RowBox[{"(", 
+              RowBox[{"2", "Pi", "*", "sigmax", "*", "sigmay", "*", 
+               RowBox[{"Sqrt", "[", 
+                RowBox[{"1", "-", 
+                 RowBox[{"rho", "^", "2"}]}], "]"}]}], ")"}]}]}], "}"}]}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"Opacity", "[", ".6", "]"}]}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"290", ",", "290"}], "}"}]}], ",", 
+         RowBox[{"PlotPoints", "\[Rule]", 
+          RowBox[{"ControlActive", "[", 
+           RowBox[{"Automatic", ",", "50"}], "]"}]}], ",", 
+         RowBox[{"ImagePadding", "\[Rule]", "30"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"ParametricPlot3D", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"exx", ",", "u", ",", "v"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"u", ",", 
+             RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"v", ",", "0", ",", 
+             RowBox[{"PDF", "[", 
+              RowBox[{
+               RowBox[{"NormalDistribution", "[", 
+                RowBox[{
+                 RowBox[{"muy", "+", 
+                  RowBox[{"rho", "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sigmay", "/", "sigmax"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"exx", "-", "mux"}], ")"}]}]}], ",", " ", 
+                 RowBox[{"sigmay", "*", 
+                  RowBox[{"Sqrt", "[", 
+                   RowBox[{"1", "-", 
+                    RowBox[{"rho", "^", "2"}]}], "]"}]}]}], "]"}], ",", "u"}],
+               "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"BoundaryStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Thick", ",", 
+               RowBox[{"ColorData", "[", 
+                RowBox[{"1", ",", "2"}], "]"}]}], "]"}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Mesh", "\[Rule]", "None"}], ",", " ", 
+           "\[IndentingNewLine]", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"ColorData", "[", 
+               RowBox[{"1", ",", "2"}], "]"}], ",", " ", 
+              RowBox[{"Opacity", "[", ".6", "]"}]}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ParametricPlot3D", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"u", ",", 
+               RowBox[{"muy", "+", 
+                RowBox[{"rho", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"sigmay", "/", "sigmax"}], ")"}], "*", 
+                 RowBox[{"(", 
+                  RowBox[{"u", "-", "mux"}], ")"}]}]}], ",", "0"}], "}"}], 
+             ",", " ", 
+             RowBox[{"{", 
+              RowBox[{"exx", ",", "u", ",", "0"}], "}"}]}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"u", ",", 
+             RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"Directive", "[", 
+             RowBox[{"Thick", ",", "Black"}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "y", ",", "None"}], "}"}]}], ",", " ", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Boxed", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"290", ",", "290"}], "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"BoxRatios", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", "2", ",", "1"}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"1.1", "*", 
+               RowBox[{"PDF", "[", 
+                RowBox[{
+                 RowBox[{"NormalDistribution", "[", 
+                  RowBox[{
+                   RowBox[{"muy", "+", 
+                    RowBox[{"rho", "*", 
+                    RowBox[{"(", 
+                    RowBox[{"sigmay", "/", "sigmax"}], ")"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{"exx", "-", "mux"}], ")"}]}]}], ",", " ", 
+                   RowBox[{"sigmay", "*", 
+                    RowBox[{"Sqrt", "[", 
+                    RowBox[{"1", "-", 
+                    RowBox[{"rho", "^", "2"}]}], "]"}]}]}], "]"}], ",", 
+                 RowBox[{"muy", "+", 
+                  RowBox[{"rho", "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sigmay", "/", "sigmax"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"exx", "-", "mux"}], ")"}]}]}]}], "]"}]}]}], 
+             "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"PlotLabel", "\[Rule]", 
+          RowBox[{"Row", "[", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<conditional distribution of \>\"", ",", "Y", ",", 
+             "\"\< when \>\"", ",", 
+             RowBox[{"HoldForm", "[", 
+              RowBox[{"X", "=", "x"}], "]"}]}], "}"}], "]"}]}], ",", 
+         RowBox[{"ImagePadding", "\[Rule]", "30"}]}], "]"}]}], "}"}], 
+     "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"exx", ",", " ", "10", ",", "\"\<x\>\""}], "}"}], ",", 
+     RowBox[{"-", "3"}], ",", "3", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "mux", ",", " ", "10", ",", " ", 
+       "\"\<\!\(\*SubscriptBox[\(\[Mu]\), \(x\)]\) = mean of X\>\""}], "}"}], 
+     ",", " ", 
+     RowBox[{"-", "3"}], ",", "3", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "muy", ",", " ", "12", ",", " ", 
+       "\"\<\!\(\*SubscriptBox[\(\[Mu]\), \(y\)]\) = mean of Y\>\""}], "}"}], 
+     ",", " ", 
+     RowBox[{"-", "3"}], ",", "3", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "sigmax", ",", " ", "3", ",", " ", 
+       "\"\<\!\(\*SubscriptBox[\(\[Sigma]\), \(x\)]\) = the standard \
+deviation of X\>\""}], "}"}], ",", " ", "2", ",", "5", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "sigmay", ",", " ", "4", ",", " ", 
+       "\"\<\!\(\*SubscriptBox[\(\[Sigma]\), \(y\)]\) = the standard \
+deviation of Y\>\""}], "}"}], ",", " ", "2", ",", "5", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "rho", ",", " ", ".6", ",", " ", 
+       "\"\<\[Rho] = the correlation coefficient of X and Y\>\""}], "}"}], 
+     ",", " ", "0", ",", ".9", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.4089792949630003`*^9, {3.408979328342*^9, 
+   3.408979374801*^9}, {3.408979559382*^9, 3.4089795995039997`*^9}, {
+   3.408979647758*^9, 3.408979691887*^9}, {3.408979724226*^9, 
+   3.4089797632209997`*^9}, {3.408980148297*^9, 3.4089801825880003`*^9}, {
+   3.4089871719256115`*^9, 3.408987276299943*^9}, {3.4089970127721157`*^9, 
+   3.40899705616354*^9}, {3.4089972464062557`*^9, 3.408997285480358*^9}, {
+   3.408997331131752*^9, 3.408997469597776*^9}, {3.408997506411908*^9, 
+   3.408997533344516*^9}, {3.408997603871166*^9, 3.408997710448234*^9}, {
+   3.4090046119890003`*^9, 3.4090046615690002`*^9}, {3.409004736758*^9, 
+   3.409004765539*^9}, {3.409004862891*^9, 3.409004864585*^9}, {
+   3.409004923225*^9, 3.409004926535*^9}, {3.409005067281*^9, 
+   3.409005072869*^9}, {3.4090051266219997`*^9, 3.4090052133*^9}, {
+   3.409005276553*^9, 3.40900531548*^9}, {3.4090055161070004`*^9, 
+   3.409005543398*^9}, {3.4090055872939997`*^9, 3.409005587649*^9}, {
+   3.4090057775699997`*^9, 3.409005817401*^9}, {3.409005858998*^9, 
+   3.409005859347*^9}, {3.4090059602869997`*^9, 3.4090059642530003`*^9}, {
+   3.4090059947390003`*^9, 3.409005995086*^9}, {3.409006203993*^9, 
+   3.409006246955*^9}, {3.409006309475*^9, 3.409006380677*^9}, {
+   3.40900678804*^9, 3.409006997685*^9}, {3.4090070351070004`*^9, 
+   3.40900708523*^9}, {3.409007191274*^9, 3.4090072762869997`*^9}, {
+   3.409055696519827*^9, 3.4090557390115433`*^9}, {3.409055940522956*^9, 
+   3.4090559841172748`*^9}, {3.4090643650070925`*^9, 3.409064396098092*^9}, {
+   3.4090649863590927`*^9, 3.4090649976180925`*^9}, {3.4090650305450926`*^9, 
+   3.409065124525092*^9}, {3.4090652488770924`*^9, 3.4090652764980927`*^9}, {
+   3.4090653140360923`*^9, 3.4090653602690926`*^9}, {3.4090654186550922`*^9, 
+   3.4090654689740925`*^9}, {3.4090659811800923`*^9, 
+   3.4090659937720923`*^9}, {3.4090767259368744`*^9, 
+   3.4090767807958984`*^9}, {3.40910053628125*^9, 3.409100565671875*^9}, {
+   3.5382768998125*^9, 3.53827693240625*^9}, {3.5382770013125*^9, 
+   3.53827701046875*^9}, {3.53827704134375*^9, 3.538277049296875*^9}, {
+   3.538277096890625*^9, 3.538277110046875*^9}, {3.538277152796875*^9, 
+   3.538277159390625*^9}, {3.538277199703125*^9, 3.538277202328125*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`exx$$ = 
+    0.1499999999999999, $CellContext`mux$$ = 
+    0.1499999999999999, $CellContext`muy$$ = 
+    0.03000000000000025, $CellContext`rho$$ = 0.6, $CellContext`sigmax$$ = 
+    3, $CellContext`sigmay$$ = 4, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`exx$$], 10, "x"}, -3, 3}, {{
+       Hold[$CellContext`mux$$], 10, 
+       "\!\(\*SubscriptBox[\(\[Mu]\), \(x\)]\) = mean of X"}, -3, 3}, {{
+       Hold[$CellContext`muy$$], 12, 
+       "\!\(\*SubscriptBox[\(\[Mu]\), \(y\)]\) = mean of Y"}, -3, 3}, {{
+       Hold[$CellContext`sigmax$$], 3, 
+       "\!\(\*SubscriptBox[\(\[Sigma]\), \(x\)]\) = the standard deviation of \
+X"}, 2, 5}, {{
+       Hold[$CellContext`sigmay$$], 4, 
+       "\!\(\*SubscriptBox[\(\[Sigma]\), \(y\)]\) = the standard deviation of \
+Y"}, 2, 5}, {{
+       Hold[$CellContext`rho$$], 0.6, 
+       "\[Rho] = the correlation coefficient of X and Y"}, 0, 0.9}}, 
+    Typeset`size$$ = {588., {142.5, 147.5}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`exx$54026$$ = 0, $CellContext`mux$54027$$ = 
+    0, $CellContext`muy$54028$$ = 0, $CellContext`sigmax$54029$$ = 
+    0, $CellContext`sigmay$54030$$ = 0, $CellContext`rho$54031$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`exx$$ = 10, $CellContext`mux$$ = 
+        10, $CellContext`muy$$ = 12, $CellContext`rho$$ = 
+        0.6, $CellContext`sigmax$$ = 3, $CellContext`sigmay$$ = 4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`exx$$, $CellContext`exx$54026$$, 0], 
+        Hold[$CellContext`mux$$, $CellContext`mux$54027$$, 0], 
+        Hold[$CellContext`muy$$, $CellContext`muy$54028$$, 0], 
+        Hold[$CellContext`sigmax$$, $CellContext`sigmax$54029$$, 0], 
+        Hold[$CellContext`sigmay$$, $CellContext`sigmay$54030$$, 0], 
+        Hold[$CellContext`rho$$, $CellContext`rho$54031$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Grid[{{
+          
+          Plot3D[(1/(2 Pi $CellContext`sigmax$$ $CellContext`sigmay$$ 
+            Sqrt[1 - $CellContext`rho$$^2])) 
+           Exp[((-1)/(
+              2 (1 - $CellContext`rho$$^2))) (($CellContext`x - \
+$CellContext`mux$$)^2/$CellContext`sigmax$$^2 + ($CellContext`y - \
+$CellContext`muy$$)^2/$CellContext`sigmay$$^2 - 
+              2 $CellContext`rho$$ ($CellContext`x - $CellContext`mux$$) \
+(($CellContext`y - $CellContext`muy$$)/($CellContext`sigmax$$ \
+$CellContext`sigmay$$)))], {$CellContext`x, -10, 10}, {$CellContext`y, -10, 
+            10}, AxesLabel -> {$CellContext`x, $CellContext`y, None}, Boxed -> 
+           False, BoxRatios -> {2, 2, 1}, PlotLabel -> 
+           "bivariate normal density", 
+           PlotRange -> {
+            0, 1/(2 Pi $CellContext`sigmax$$ $CellContext`sigmay$$ 
+             Sqrt[1 - $CellContext`rho$$^2])}, PlotStyle -> Opacity[0.6], 
+           ImageSize -> {290, 290}, PlotPoints -> 
+           ControlActive[Automatic, 50], ImagePadding -> 30], 
+          Show[
+           
+           ParametricPlot3D[{$CellContext`exx$$, $CellContext`u, \
+$CellContext`v}, {$CellContext`u, -10, 10}, {$CellContext`v, 0, 
+             PDF[
+              
+              NormalDistribution[$CellContext`muy$$ + $CellContext`rho$$ \
+($CellContext`sigmay$$/$CellContext`sigmax$$) ($CellContext`exx$$ - \
+$CellContext`mux$$), $CellContext`sigmay$$ 
+               Sqrt[1 - $CellContext`rho$$^2]], $CellContext`u]}, 
+            BoundaryStyle -> {
+              Directive[Thick, 
+               ColorData[1, 2]]}, Mesh -> None, PlotStyle -> {
+              ColorData[1, 2], 
+              Opacity[0.6]}], 
+           
+           ParametricPlot3D[{{$CellContext`u, $CellContext`muy$$ + \
+$CellContext`rho$$ ($CellContext`sigmay$$/$CellContext`sigmax$$) \
+($CellContext`u - $CellContext`mux$$), 
+              0}, {$CellContext`exx$$, $CellContext`u, 
+              0}}, {$CellContext`u, -10, 10}, PlotStyle -> 
+            Directive[Thick, Black]], 
+           AxesLabel -> {$CellContext`x, $CellContext`y, None}, Boxed -> 
+           False, ImageSize -> {290, 290}, BoxRatios -> {2, 2, 1}, 
+           PlotRange -> {{-10, 10}, {-10, 10}, {0, 1.1 PDF[
+                
+                NormalDistribution[$CellContext`muy$$ + $CellContext`rho$$ \
+($CellContext`sigmay$$/$CellContext`sigmax$$) ($CellContext`exx$$ - \
+$CellContext`mux$$), $CellContext`sigmay$$ 
+                 Sqrt[1 - $CellContext`rho$$^2]], $CellContext`muy$$ + \
+$CellContext`rho$$ ($CellContext`sigmay$$/$CellContext`sigmax$$) \
+($CellContext`exx$$ - $CellContext`mux$$)]}}, PlotLabel -> 
+           Row[{"conditional distribution of ", $CellContext`Y, " when ", 
+              HoldForm[$CellContext`X = $CellContext`x]}], ImagePadding -> 
+           30]}}], "Specifications" :> {{{$CellContext`exx$$, 10, "x"}, -3, 3,
+          Appearance -> 
+         "Labeled"}, {{$CellContext`mux$$, 10, 
+          "\!\(\*SubscriptBox[\(\[Mu]\), \(x\)]\) = mean of X"}, -3, 3, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`muy$$, 12, 
+          "\!\(\*SubscriptBox[\(\[Mu]\), \(y\)]\) = mean of Y"}, -3, 3, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`sigmax$$, 3, 
+          "\!\(\*SubscriptBox[\(\[Sigma]\), \(x\)]\) = the standard deviation \
+of X"}, 2, 5, Appearance -> 
+         "Labeled"}, {{$CellContext`sigmay$$, 4, 
+          "\!\(\*SubscriptBox[\(\[Sigma]\), \(y\)]\) = the standard deviation \
+of Y"}, 2, 5, Appearance -> 
+         "Labeled"}, {{$CellContext`rho$$, 0.6, 
+          "\[Rho] = the correlation coefficient of X and Y"}, 0, 0.9, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{634., {255., 260.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.53827693634375*^9, 3.538277011171875*^9, 
+  3.53827705015625*^9, 3.538277111296875*^9, 3.538277159828125*^9, 
+  3.53827721521875*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox["X", TraditionalForm]], "InlineMath"],
+ " is a normal random variable and the conditional distribution of ",
+ Cell[BoxData[
+  FormBox["Y", TraditionalForm]], "InlineMath"],
+ " given ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"X", "=", "x"}], TraditionalForm]], "InlineMath"],
+ " is (1) normal, (2) has a mean that is a linear function of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]], "InlineMath"],
+ ", and (3) has a variance that is constant (does not depend on ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]], "InlineMath"],
+ "), then the pair ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"X", ",", "Y"}], ")"}], TraditionalForm]], "InlineMath"],
+ " follows a bivariate normal distribution. The left image is a graph of the \
+bivariate density function and the right image shows the conditional \
+distribution of ",
+ Cell[BoxData[
+  FormBox["Y", TraditionalForm]], "InlineMath"],
+ " when ",
+ Cell[BoxData[
+  FormBox["X", TraditionalForm]], "InlineMath"],
+ " takes the value of the ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]], "InlineMath"],
+ " slider. "
+}], "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["The Bivariate Normal and Conditional Distributions",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/\
+TheBivariateNormalAndConditionalDistributions/"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/\
+TheBivariateNormalAndConditionalDistributions/"],
+ "\"",
+ " from ",
+ ButtonBox["the Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/\
+TheBivariateNormalAndConditionalDistributions/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/\
+TheBivariateNormalAndConditionalDistributions/"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/\
+TheBivariateNormalAndConditionalDistributions/"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Chris Boucher",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Chris+Boucher"],
+     None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Chris+Boucher"]
+}], "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6]],
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system (Version 6 or higher) is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+TheBivariateNormalAndConditionalDistributions"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{1912, 993},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"The Bivariate Normal and Conditional Distributions - Source",
+DockedCells->{},
+CellContext->Notebook,
+CellInsertionPointCell -> None,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[580, 21, 170, 3, 66, "Section"],
+Cell[CellGroupData[{
+Cell[775, 28, 3700, 64, 37, "Section"],
+Cell[CellGroupData[{
+Cell[4500, 96, 12529, 290, 552, "Input"],
+Cell[17032, 388, 6623, 127, 532, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23704, 521, 209, 6, 62, "Section"],
+Cell[23916, 529, 1142, 34, 70, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[25095, 568, 355, 9, 20, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[25453, 579, 1070, 31, 34, "Text"],
+Cell[26526, 612, 436, 14, 18, "Text"],
+Cell[26965, 628, 815, 24, 100, "Text"],
+Cell[27783, 654, 1217, 33, 88, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+(* NotebookSignature TS4A@7QtUz@z6DD2qqp9h#Yn *)

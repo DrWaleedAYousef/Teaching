@@ -1,0 +1,1 @@
+//CMOS 2–input NAND Fig. 10-22(b)module NAND2 (Y, A, B);  input A, B;   output Y;  supply1  PWR;  supply0  GRD;  wire W1;		//terminal between two nmos  pmos (Y, PWR, A);	// source connected to Vdd  pmos (Y, PWR, B);	// parallel connection  nmos (Y, W1, A);	// serial connection  nmos (W1, GRD, B);	// source connected to groundendmodule

@@ -1,0 +1,189 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      7158,        180]
+NotebookOptionsPosition[      6738,        160]
+NotebookOutlinePosition[      7101,        176]
+CellTagsIndexPosition[      7058,        173]
+WindowFrame->Normal
+ContainsDynamic->True *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["F Distribution\n",
+ FontWeight->"Bold"]], "Section",
+ CellChangeTimes->{{3.4164707409375*^9, 3.41647077446875*^9}, 
+   3.41647084446875*^9, {3.416476223859375*^9, 3.416476296640625*^9}, {
+   3.5286029760625*^9, 3.52860297853125*^9}, 3.5286037476875*^9, {
+   3.540366010859375*^9, 3.54036601290625*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Animate", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", " ", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"Gamma", "[", 
+         FractionBox[
+          RowBox[{"m", "+", "n"}], "2"], "]"}], 
+        RowBox[{
+         RowBox[{"Gamma", "[", 
+          FractionBox["m", "2"], "]"}], " ", 
+         RowBox[{"Gamma", "[", 
+          FractionBox["n", "2"], "]"}]}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox["m", "n"], ")"}], 
+        RowBox[{"m", "/", "2"}]], " ", 
+       SuperscriptBox["w", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"m", "/", "2"}], ")"}], "-", "1"}]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"m", "/", "n"}], ")"}], "w"}]}], ")"}], 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"m", "+", "n"}], ")"}]}], "/", "2"}]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"w", ",", " ", "0", ",", " ", "20"}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"m", ",", " ", "1", ",", " ", "100", ",", " ", "2"}], "}"}], ",",
+     " ", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", " ", "1", ",", " ", "100", ",", " ", "2"}], "}"}]}], 
+   "]"}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.416462056421875*^9, 3.4164622916875*^9}, 
+   3.41646240634375*^9, {3.416462441765625*^9, 3.4164626355*^9}, {
+   3.416462687140625*^9, 3.416462743484375*^9}, {3.416462807234375*^9, 
+   3.4164628674375*^9}, {3.4164629405*^9, 3.416462962140625*^9}, {
+   3.416463012578125*^9, 3.416463044203125*^9}, {3.416470413921875*^9, 
+   3.416470457296875*^9}, {3.416470669453125*^9, 3.41647067021875*^9}, {
+   3.416474617203125*^9, 3.416474678640625*^9}, {3.416474851015625*^9, 
+   3.41647486609375*^9}, {3.41647502878125*^9, 3.4164750328125*^9}, {
+   3.4164750714375*^9, 3.41647509496875*^9}, {3.416475346109375*^9, 
+   3.416475383859375*^9}, {3.41647550603125*^9, 3.416475513203125*^9}, {
+   3.41647561965625*^9, 3.41647562359375*^9}, {3.416475662578125*^9, 
+   3.4164757153125*^9}, {3.416476515484375*^9, 3.416476552890625*^9}, {
+   3.41648132996875*^9, 3.416481334234375*^9}, {3.416484140109375*^9, 
+   3.4164841760625*^9}, {3.528602524078125*^9, 3.52860272228125*^9}, {
+   3.528602756875*^9, 3.528602777328125*^9}, {3.5286028884375*^9, 
+   3.528602891875*^9}, {3.5286029293125*^9, 3.5286029524375*^9}, {
+   3.528603006171875*^9, 3.528603008984375*^9}, {3.52860306075*^9, 
+   3.5286031110625*^9}, {3.52860326696875*^9, 3.52860327415625*^9}, {
+   3.528603316125*^9, 3.528603316203125*^9}, {3.528603367078125*^9, 
+   3.5286033706875*^9}, {3.52860340446875*^9, 3.5286034115*^9}, {
+   3.52863269990625*^9, 3.528632725890625*^9}, {3.54036602371875*^9, 
+   3.540366246546875*^9}, {3.540367003546875*^9, 3.5403670073125*^9}, {
+   3.540367121359375*^9, 3.5403671280625*^9}, {3.54036716990625*^9, 
+   3.54036717275*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 13, $CellContext`n$$ = 95, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`m$$], 1, 100, 2}, {
+      Hold[$CellContext`n$$], 1, 100, 2}}, Typeset`size$$ = {
+    450., {138., 145.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`m$134085$$ = 
+    0, $CellContext`n$134086$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`m$$ = 1, $CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`m$$, $CellContext`m$134085$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$134086$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[(Gamma[($CellContext`m$$ + $CellContext`n$$)/2]/(
+         Gamma[$CellContext`m$$/2] 
+         Gamma[$CellContext`n$$/
+           2])) ($CellContext`m$$/$CellContext`n$$)^($CellContext`m$$/
+          2) $CellContext`w^($CellContext`m$$/2 - 1) (
+          1 + ($CellContext`m$$/$CellContext`n$$) \
+$CellContext`w)^((-($CellContext`m$$ + $CellContext`n$$))/2), {$CellContext`w,
+          0, 20}, PlotRange -> All], 
+      "Specifications" :> {{$CellContext`m$$, 1, 100, 2, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}, {$CellContext`n$$, 1, 100, 2, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, 
+        SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{499., {196.5, 203.5}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.5403661929375*^9, 3.540366196625*^9}, {
+  3.540366228125*^9, 3.540366229453125*^9}, {3.5403662640625*^9, 
+  3.54036626940625*^9}, {3.540366650421875*^9, 3.54036665403125*^9}, {
+  3.540367011796875*^9, 3.54036701440625*^9}, {3.540367066546875*^9, 
+  3.540367198703125*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1248, 872},
+WindowMargins->{{Automatic, 210}, {Automatic, 17}},
+Magnification->1.25,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 326, 5, 121, "Section"],
+Cell[CellGroupData[{
+Cell[941, 32, 2995, 66, 88, "Input"],
+Cell[3939, 100, 2771, 56, 421, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

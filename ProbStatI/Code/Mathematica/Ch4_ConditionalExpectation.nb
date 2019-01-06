@@ -1,0 +1,169 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      6311,        160]
+NotebookOptionsPosition[      5951,        143]
+NotebookOutlinePosition[      6290,        158]
+CellTagsIndexPosition[      6247,        155]
+WindowFrame->Normal
+ContainsDynamic->True *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"ListPointPlot3D", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"p", " ", "\[Lambda]"}], ")"}], "x"], 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"-", "p"}], " ", "\[Lambda]"}]]}], 
+         RowBox[{"x", "!"}]], 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "-", "p"}], ")"}], "\[Lambda]"}], ")"}], 
+           RowBox[{"n", "-", "x"}]], 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"(", 
+              RowBox[{"1", "-", "p"}], ")"}]}], " ", "\[Lambda]"}]]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"n", "-", "x"}], ")"}], "!"}]]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "10", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "0", ",", "10", ",", "1"}], "}"}]}], "]"}], ",", 
+     RowBox[{"Filling", "\[Rule]", "Bottom"}], ",", 
+     RowBox[{"FillingStyle", "\[Rule]", 
+      RowBox[{"Thickness", "[", ".004", "]"}]}], ",", "  ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<n\>\"", ",", " ", "\"\<x\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Lambda]", ",", ".1", ",", "20"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.538313169984375*^9, 3.538313298296875*^9}, {
+  3.53831341059375*^9, 3.53831342721875*^9}, {3.5383134645*^9, 
+  3.53831351171875*^9}, {3.53831360575*^9, 3.538313605828125*^9}, {
+  3.538313754609375*^9, 3.538313754671875*^9}, {3.5383138019375*^9, 
+  3.53831380253125*^9}, {3.538314102015625*^9, 3.53831411403125*^9}, {
+  3.538314312484375*^9, 3.538314316140625*^9}, {3.5383144415625*^9, 
+  3.538314450765625*^9}, {3.538314524828125*^9, 3.538314526890625*^9}, {
+  3.53831473665625*^9, 3.53831474890625*^9}, {3.538314782*^9, 
+  3.53831478875*^9}, {3.538316236484375*^9, 3.538316296125*^9}, {
+  3.538316508046875*^9, 3.538316508109375*^9}, {3.538316651359375*^9, 
+  3.538316727828125*^9}, {3.53831698334375*^9, 3.53831698390625*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = 0.83125, $CellContext`\[Lambda]$$ = 
+    18.383125, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`p$$], 0, 1}, {
+      Hold[$CellContext`\[Lambda]$$], 0.1, 20}}, Typeset`size$$ = {
+    918., {357., 362.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`p$76176$$ = 
+    0, $CellContext`\[Lambda]$76177$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`p$$ = 0, $CellContext`\[Lambda]$$ = 0.1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`p$$, $CellContext`p$76176$$, 0], 
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$76177$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPointPlot3D[
+        Table[(($CellContext`p$$ $CellContext`\[Lambda]$$)^$CellContext`x 
+          E^((-$CellContext`p$$) $CellContext`\[Lambda]$$)/
+          Factorial[$CellContext`x]) (((
+             1 - $CellContext`p$$) $CellContext`\[Lambda]$$)^($CellContext`n - \
+$CellContext`x) E^((-(1 - $CellContext`p$$)) $CellContext`\[Lambda]$$)/
+          Factorial[$CellContext`n - $CellContext`x]), {$CellContext`x, 0, 10,
+           1}, {$CellContext`n, 0, 10, 1}], Filling -> Bottom, FillingStyle -> 
+        Thickness[0.004], AxesLabel -> {"n", "x"}, PlotRange -> All], 
+      "Specifications" :> {{$CellContext`p$$, 0, 1, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}, {$CellContext`\[Lambda]$$, 0.1, 20, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, 
+        SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{964., {408., 413.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.538316708578125*^9, 3.53831673321875*^9}, {
+  3.53831676446875*^9, 3.538316838828125*^9}, {3.538316984296875*^9, 
+  3.538316989*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.538317051171875*^9}]
+},
+WindowSize->{1912, 993},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 2439, 58, 50, "Input"],
+Cell[3032, 83, 2832, 54, 838, "Output"]
+}, Open  ]],
+Cell[5879, 140, 68, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
