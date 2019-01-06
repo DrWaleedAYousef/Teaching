@@ -1,0 +1,1035 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     41728,       1026]
+NotebookOptionsPosition[     39913,        973]
+NotebookOutlinePosition[     40439,        994]
+CellTagsIndexPosition[     40396,        991]
+WindowFrame->Normal
+ContainsDynamic->True *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<MultivariateStatistics`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"<<", "mathstatica`"}], " ", "\[IndentingNewLine]", 
+    RowBox[{"<<", "NumericalMath`"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "[", 
+     RowBox[{
+      RowBox[{"X_", " ", "/;", " ", 
+       RowBox[{"VectorQ", "[", "X", "]"}]}], " ", ",", " ", 
+      RowBox[{"mu_", " ", "/;", " ", 
+       RowBox[{"VectorQ", "[", "mu", "]"}]}], " ", ",", " ", 
+      RowBox[{"sigma_", " ", "/;", " ", 
+       RowBox[{"MatrixQ", "[", "sigma", "]"}]}], " ", ",", " ", "pw_"}], 
+     "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"d", "=", 
+        RowBox[{"Length", "[", "mu", "]"}]}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "1"}], "/", "2"}], " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"X", "-", "mu"}], ")"}], ".", 
+         RowBox[{"Inverse", "[", "sigma", "]"}], ".", 
+         RowBox[{"(", 
+          RowBox[{"X", "-", "mu"}], ")"}]}]}], "-", " ", 
+       RowBox[{
+        RowBox[{"d", "/", "2"}], " ", 
+        RowBox[{"Log", "[", 
+         RowBox[{"2", "\[Pi]"}], "]"}]}], " ", "-", " ", 
+       RowBox[{
+        RowBox[{"1", "/", "2"}], " ", 
+        RowBox[{"Log", "[", 
+         RowBox[{"Det", "[", "sigma", "]"}], "]"}]}], " ", "+", " ", 
+       RowBox[{"Log", "[", "pw", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   ";"}], " "}]}], "Input",
+ CellChangeTimes->{{3.40337178709375*^9, 3.40337178965625*^9}, {
+  3.403371877515625*^9, 3.40337189315625*^9}, {3.403372063640625*^9, 
+  3.403372064890625*^9}, {3.40337227578125*^9, 3.4033722789375*^9}, {
+  3.403372462578125*^9, 3.403372464375*^9}, {3.403372582546875*^9, 
+  3.40337259525*^9}, {3.403372706578125*^9, 3.403372706953125*^9}, {
+  3.403372739109375*^9, 3.40337274840625*^9}, {3.40337777603125*^9, 
+  3.403377780046875*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"mu1", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}]}], ";", 
+  RowBox[{"sigma1", "=", 
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"1", ".5"},
+      {".5", "1"}
+     }], "\[NoBreak]", ")"}]}], ";", " ", 
+  RowBox[{"pw1", "=", "0.5"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"mu2", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", " ", "0"}], "}"}]}], ";", 
+  RowBox[{"sigma2", "=", 
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"1", ".5"},
+      {".5", "1"}
+     }], "\[NoBreak]", ")"}]}], ";", " ", 
+  RowBox[{"pw2", "=", "0.5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"samples1", "=", "10"}], ";", 
+  RowBox[{"points1", "=", 
+   RowBox[{"RandomReal", "[", 
+    RowBox[{
+     RowBox[{"MultinormalDistribution", "[", 
+      RowBox[{"mu1", ",", "sigma1"}], "]"}], ",", "samples1"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"samples2", "=", "10"}], ";", 
+   RowBox[{"points2", "=", 
+    RowBox[{"RandomReal", "[", 
+     RowBox[{
+      RowBox[{"MultinormalDistribution", "[", 
+       RowBox[{"mu2", ",", "sigma2"}], "]"}], ",", "samples2"}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"estmu1", "=", 
+   RowBox[{"Mean", "[", "points1", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"estsigma1", "=", 
+   RowBox[{"Covariance", "[", "points1", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"estmu2", "=", 
+   RowBox[{"Mean", "[", "points2", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"estsigma2", "=", 
+    RowBox[{"Covariance", "[", "points2", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InfList1", "=", 
+   RowBox[{"RandomReal", "[", 
+    RowBox[{
+     RowBox[{"MultinormalDistribution", "[", 
+      RowBox[{"mu1", ",", "sigma1"}], "]"}], ",", "500"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InfList2", "=", 
+   RowBox[{"RandomReal", "[", 
+    RowBox[{
+     RowBox[{"MultinormalDistribution", "[", 
+      RowBox[{"mu2", ",", "sigma2"}], "]"}], ",", "500"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sym1", "=", "\"\<+\>\""}], ";", " ", 
+   RowBox[{"sym2", "=", "\"\<o\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pw2", "=", 
+      RowBox[{"1", "-", "pw1"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmp1", "=", 
+      RowBox[{"ContourPlot", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"g", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "x2"}], "}"}], ",", "estmu1", ",", "estsigma1",
+            ",", "pw1"}], "]"}], "\[Equal]", 
+         RowBox[{"g", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "x2"}], "}"}], ",", "estmu2", ",", "estsigma2",
+            ",", "pw2"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x1", ",", " ", 
+          RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"x2", ",", " ", 
+          RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+        RowBox[{"ContourStyle", "\[Rule]", 
+         RowBox[{"{", "Gray", "}"}]}], ",", " ", 
+        RowBox[{"DisplayFunction", "\[Rule]", "Identity"}]}], " ", "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"tmp2", "=", 
+      RowBox[{"ContourPlot", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"g", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "x2"}], "}"}], ",", "mu1", ",", "sigma1", ",", 
+           "pw1"}], "]"}], "\[Equal]", 
+         RowBox[{"g", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "x2"}], "}"}], ",", "mu2", ",", "sigma2", ",", 
+           "pw2"}], "]"}]}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"x1", ",", " ", 
+          RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"x2", ",", " ", 
+          RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+        RowBox[{"ContourStyle", "\[Rule]", 
+         RowBox[{"{", "Black", "}"}]}], ",", " ", 
+        RowBox[{"DisplayFunction", "\[Rule]", "Identity"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"g1", "=", 
+      RowBox[{"ListPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"points1", ",", "points2"}], "}"}], ",", " ", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", " ", "Red"}], "}"}]}], ",", " ", 
+        RowBox[{"PlotMarkers", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"sym1", ",", " ", "sym2"}], "}"}]}], ",", 
+        RowBox[{"Epilog", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "tmp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+           ",", " ", 
+           RowBox[{"tmp2", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], ",", 
+        RowBox[{"DisplayFunction", "\[Rule]", "Identity"}], ",", " ", 
+        RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", " ", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "5"}], ",", " ", "5"}], "}"}]}], "}"}]}]}], "]"}]}],
+      ";", "\[IndentingNewLine]", 
+     RowBox[{"g2", "=", 
+      RowBox[{"ListPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"InfList1", ",", "InfList2"}], "}"}], ",", " ", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", " ", "Red"}], "}"}]}], ",", 
+        RowBox[{"PlotMarkers", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"sym1", ",", " ", "sym2"}], "}"}]}], ",", 
+        RowBox[{"Epilog", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"tmp2", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "}"}]}], ",", 
+        RowBox[{"DisplayFunction", "\[Rule]", "Identity"}], ",", " ", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "5"}], ",", " ", "5"}], "}"}]}], "}"}]}], ",", " ", 
+        
+        RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Show", "[", 
+      RowBox[{"GraphicsArray", "[", 
+       RowBox[{"{", 
+        RowBox[{"g1", ",", " ", "g2"}], "}"}], "]"}], "]"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"pw1", ",", " ", ".1", ",", " ", ".9"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"normalize1", "=", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"g", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x1", ",", "x2"}], "}"}], ",", "mu1", ",", "sigma1", ",", 
+        "pw1"}], "]"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"MinRecursion", "\[Rule]", "5"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"normalize2", "=", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"g", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x1", ",", "x2"}], "}"}], ",", "mu2", ",", "sigma2", ",", 
+        "pw2"}], "]"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"MinRecursion", "\[Rule]", "5"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"g3", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"g", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x1", ",", "x2"}], "}"}], ",", "mu1", ",", "sigma1", ",", 
+         "pw1"}], "]"}]], "normalize1"], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"DisplayFunction", "\[Rule]", "Identity"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"g4", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"g", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x1", ",", "x2"}], "}"}], ",", "mu2", ",", "sigma2", ",", 
+         "pw2"}], "]"}]], "normalize2"], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"DisplayFunction", "\[Rule]", "Identity"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"normalize1", "=", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"g", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x1", ",", "x2"}], "}"}], ",", "estmu1", ",", "estsigma1", 
+        ",", "pw1"}], "]"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"MinRecursion", "\[Rule]", "5"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"normalize2", "=", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"g", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x1", ",", "x2"}], "}"}], ",", "estmu2", ",", "estsigma2", 
+        ",", "pw2"}], "]"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"MinRecursion", "\[Rule]", "5"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"g5", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"g", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x1", ",", "x2"}], "}"}], ",", "estmu1", ",", "estsigma1", 
+         ",", "pw1"}], "]"}]], "normalize1"], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu1", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"DisplayFunction", "\[Rule]", "Identity"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"g6", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"g", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x1", ",", "x2"}], "}"}], ",", "estmu2", ",", "estsigma2", 
+         ",", "pw2"}], "]"}]], "normalize2"], ",", 
+     RowBox[{"{", 
+      RowBox[{"x1", ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2", ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "-", "3"}], ",", 
+       RowBox[{
+        RowBox[{"mu2", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+         "+", "3"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"DisplayFunction", "\[Rule]", "Identity"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"GraphicsArray", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Show", "[", 
+        RowBox[{"g5", ",", "g6"}], "]"}], ",", " ", 
+       RowBox[{"Show", "[", 
+        RowBox[{"g3", ",", " ", "g4"}], "]"}]}], "}"}], "]"}], ",", 
+    RowBox[{"DisplayFunction", "\[Rule]", "$DisplayFunction"}]}], "]"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<Estimated \\!\\(\\*SubscriptBox[\\(\[Mu]\\), \\(1\\)]\\) = \>\"", ",",
+     
+    RowBox[{
+     TagBox["estmu1",
+      Function[BoxForm`e$, 
+       TableForm[BoxForm`e$]]], " ", "//", "MatrixForm"}], ",", 
+    "\"\<    Estimated \\!\\(\\*SubscriptBox[\\(\[CapitalSigma]\\), \
+\\(1\\)]\\) = \>\"", ",", 
+    RowBox[{
+     TagBox["estsigma1",
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], "//", "MatrixForm"}], ",", "\"\<\\n\\n\>\"", 
+    ",", "\"\<Estimated \\!\\(\\*SubscriptBox[\\(\[Mu]\\), \\(2\\)]\\) = \
+\>\"", ",", 
+    RowBox[{
+     TagBox["estmu2",
+      Function[BoxForm`e$, 
+       TableForm[BoxForm`e$]]], " ", "//", "MatrixForm"}], ",", 
+    "\"\<    Estimated \\!\\(\\*SubscriptBox[\\(\[CapitalSigma]\\), \
+\\(2\\)]\\) = \>\"", ",", 
+    RowBox[{"estsigma2", "//", "MatrixForm"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.573650715809375*^9, 3.57365073073125*^9}, {
+   3.57365079698125*^9, 3.573650813996875*^9}, 3.573652262934375*^9, {
+   3.573656444809375*^9, 3.57365648285625*^9}, {3.5736565322*^9, 
+   3.57365653523125*^9}, {3.573656566075*^9, 3.573656625809375*^9}, {
+   3.573656670325*^9, 3.57365674404375*^9}, {3.573656889403125*^9, 
+   3.573656890184375*^9}, {3.573656999465625*^9, 3.573657020996875*^9}, {
+   3.573657528403125*^9, 3.5736575547*^9}, {3.5736585308875*^9, 
+   3.573658554996875*^9}, {3.573658609059375*^9, 3.573658616309375*^9}, 
+   3.573658663371875*^9, 3.573658726184375*^9, {3.574074003015625*^9, 
+   3.574074006703125*^9}, {3.574074354734375*^9, 3.574074393859375*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MultinormalDistribution", "::", "\<\"cmdet\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The covariance matrix must have a non-negative \
+determinant. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MultivariateStatistics/ref/MultinormalDistribution\\\",\
+ ButtonNote -> \
+\\\"MultivariateStatistics`.`MultinormalDistribution::cmdet\\\"]\\)\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.574074362734375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomReal", "::", "\<\"udist\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The specification \
+\\!\\(MultinormalDistribution[\\(\\(\\(\\({0, 0}\\)\\), \\(\\({\\(\\({0.5`, \
+1}\\)\\), \\(\\({1, 0.5`}\\)\\)}\\)\\)\\)\\)]\\) is not a random distribution \
+recognized by the system. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/RandomReal\\\", ButtonNote -> \
+\\\"RandomReal::udist\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074362953125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Covariance", "::", "\<\"arg1\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The first argument must be either a vector or a matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Covariance\\\", ButtonNote -> \
+\\\"Covariance::arg1\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5740743630625*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MultinormalDistribution", "::", "\<\"cmdet\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The covariance matrix must have a non-negative \
+determinant. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MultivariateStatistics/ref/MultinormalDistribution\\\",\
+ ButtonNote -> \
+\\\"MultivariateStatistics`.`MultinormalDistribution::cmdet\\\"]\\)\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.57407436309375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomReal", "::", "\<\"udist\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The specification \
+\\!\\(MultinormalDistribution[\\(\\(\\(\\({0, 0}\\)\\), \\(\\({\\(\\({0.5`, \
+1}\\)\\), \\(\\({1, 0.5`}\\)\\)}\\)\\)\\)\\)]\\) is not a random distribution \
+recognized by the system. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/RandomReal\\\", ButtonNote -> \
+\\\"RandomReal::udist\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407436309375*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`pw1$$ = 0.1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`pw1$$], 0.1, 0.9}}, Typeset`size$$ = {
+    720., {177., 199.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`pw1$181588$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`pw1$$ = 0.1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`pw1$$, $CellContext`pw1$181588$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`pw2 = 1 - $CellContext`pw1$$; $CellContext`tmp1 = 
+        ContourPlot[$CellContext`g[{$CellContext`x1, $CellContext`x2}, \
+$CellContext`estmu1, $CellContext`estsigma1, $CellContext`pw1$$] == \
+$CellContext`g[{$CellContext`x1, $CellContext`x2}, $CellContext`estmu2, \
+$CellContext`estsigma2, $CellContext`pw2], {$CellContext`x1, -5, 
+           5}, {$CellContext`x2, -5, 5}, ContourStyle -> {Gray}, 
+          DisplayFunction -> Identity]; $CellContext`tmp2 = 
+        ContourPlot[$CellContext`g[{$CellContext`x1, $CellContext`x2}, \
+$CellContext`mu1, $CellContext`sigma1, $CellContext`pw1$$] == \
+$CellContext`g[{$CellContext`x1, $CellContext`x2}, $CellContext`mu2, \
+$CellContext`sigma2, $CellContext`pw2], {$CellContext`x1, -5, 
+           5}, {$CellContext`x2, -5, 5}, ContourStyle -> {Black}, 
+          DisplayFunction -> Identity]; $CellContext`g1 = 
+        ListPlot[{$CellContext`points1, $CellContext`points2}, 
+          PlotStyle -> {Blue, Red}, 
+          PlotMarkers -> {$CellContext`sym1, $CellContext`sym2}, Epilog -> {
+            Part[$CellContext`tmp1, 1], 
+            Part[$CellContext`tmp2, 1]}, DisplayFunction -> Identity, 
+          AspectRatio -> 1, PlotRange -> {{-5, 5}, {-5, 5}}]; $CellContext`g2 = 
+        ListPlot[{$CellContext`InfList1, $CellContext`InfList2}, 
+          PlotStyle -> {Blue, Red}, 
+          PlotMarkers -> {$CellContext`sym1, $CellContext`sym2}, Epilog -> {
+            Part[$CellContext`tmp2, 1]}, DisplayFunction -> Identity, 
+          PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 1]; Show[
+         GraphicsArray[{$CellContext`g1, $CellContext`g2}]]), 
+      "Specifications" :> {{$CellContext`pw1$$, 0.1, 0.9}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{776., {248., 259.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.573656821559375*^9, {3.57365689329375*^9, 3.57365696785625*^9}, 
+   3.573657044090625*^9, {3.573657087059375*^9, 3.573657194309375*^9}, {
+   3.573657533153125*^9, 3.5736575551375*^9}, 3.573658393153125*^9, 
+   3.573658455559375*^9, {3.57365853479375*^9, 3.5736585553875*^9}, 
+   3.5736586167*^9, 3.573658664715625*^9, 3.57365872729375*^9, 
+   3.57407240484375*^9, 3.57407376628125*^9, {3.57407386959375*^9, 
+   3.5740738985*^9}, 3.574074014890625*^9, {3.574074257671875*^9, 
+   3.57407431275*^9}, 3.574074363125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumri\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(\[ExponentialE]\\^\\(\\(\\((\\(\\(-1.7993965458412813`\\)\\) - \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\))\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\) has evaluated to Overflow, Indeterminate, or \
+Infinity for all sampling points in the region with boundaries \
+\\!\\({\\(\\({0.`, 1.1277549486941038`*^7}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/NIntegrate\\\", ButtonNote -> \
+\\\"NIntegrate::inumri\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074364796875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumri\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(\[ExponentialE]\\^\\(\\(\\((\\(\\(-1.7993965458412813`\\)\\) - \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\))\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\) has evaluated to Overflow, Indeterminate, or \
+Infinity for all sampling points in the region with boundaries \
+\\!\\({\\(\\({0.`, 1.1277549486941038`*^7}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/NIntegrate\\\", ButtonNote -> \
+\\\"NIntegrate::inumri\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074365703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumri\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(\[ExponentialE]\\^\\(\\(\\((\\(\\(-1.7993965458412813`\\)\\) - \\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\))\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\) has evaluated to Overflow, Indeterminate, or \
+Infinity for all sampling points in the region with boundaries \
+\\!\\({\\(\\({0.`, 1.1277549486941038`*^7}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/NIntegrate\\\", ButtonNote -> \
+\\\"NIntegrate::inumri\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074366671875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumri\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \\!\\(0.15915494309189535`\\\\ \
+\[ExponentialE]\\^\\(\\(\\((\\(\\(\\(\[LeftSkeleton] 20 \[RightSkeleton]\\) \
+\[InvisibleSpace]\\)\\) - \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\))\\)\\) + \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)\\)\\) has evaluated to Overflow, Indeterminate, or \
+Infinity for all sampling points in the region with boundaries \
+\\!\\({\\(\\({0.`, 1.1277549486941038`*^7}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/NIntegrate\\\", ButtonNote -> \
+\\\"NIntegrate::inumri\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5740743675*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumri\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(2.718281828459045`\\^\\(\\(\\((\\(\\(-1.7993965458412813`\\)\\) - \
+\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\))\\)\\) + \\(\\(\[LeftSkeleton] \
+1 \[RightSkeleton]\\)\\)\\)\\) has evaluated to Overflow, Indeterminate, or \
+Infinity for all sampling points in the region with boundaries \
+\\!\\({\\(\\({0.`, 1.1277549486941038`*^7}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/NIntegrate\\\", ButtonNote -> \
+\\\"NIntegrate::inumri\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407436834375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(NIntegrate :: \\\"inumri\\\"\\) \
+will be suppressed during this calculation. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074368515625*^9}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{
+  3.573656821559375*^9, {3.57365689329375*^9, 3.57365696785625*^9}, 
+   3.573657044090625*^9, {3.573657087059375*^9, 3.573657194309375*^9}, {
+   3.573657533153125*^9, 3.5736575551375*^9}, 3.573658393153125*^9, 
+   3.573658455559375*^9, {3.57365853479375*^9, 3.5736585553875*^9}, 
+   3.5736586167*^9, 3.573658664715625*^9, 3.57365872729375*^9, 
+   3.57407240484375*^9, 3.57407376628125*^9, {3.57407386959375*^9, 
+   3.5740738985*^9}, 3.574074014890625*^9, {3.574074257671875*^9, 
+   3.57407431275*^9}, 3.574074407703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumr\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(\[ExponentialE]\\^\\(g[\\(\\(\\(\\({x1, x2}\\)\\), \\(\\(Mean[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\), \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\), 0.9`\\)\\)]\\)\\) has evaluated to non-numerical \
+values for all sampling points in the region with boundaries \
+\\!\\({\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/inumr\\\", \
+ButtonNote -> \\\"NIntegrate::inumr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440828125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumr\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(\[ExponentialE]\\^\\(g[\\(\\(\\(\\({x1, x2}\\)\\), \\(\\(Mean[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\), \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\), 0.9`\\)\\)]\\)\\) has evaluated to non-numerical \
+values for all sampling points in the region with boundaries \
+\\!\\({\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/inumr\\\", \
+ButtonNote -> \\\"NIntegrate::inumr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumr\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(\[ExponentialE]\\^\\(g[\\(\\(\\(\\({x1, x2}\\)\\), \\(\\(Mean[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\), \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\), 0.9`\\)\\)]\\)\\) has evaluated to non-numerical \
+values for all sampling points in the region with boundaries \
+\\!\\({\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/inumr\\\", \
+ButtonNote -> \\\"NIntegrate::inumr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408625*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MultinormalDistribution", "::", "\<\"cmdet\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The covariance matrix must have a non-negative \
+determinant. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MultivariateStatistics/ref/MultinormalDistribution\\\",\
+ ButtonNote -> \
+\\\"MultivariateStatistics`.`MultinormalDistribution::cmdet\\\"]\\)\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.574074408640625*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomReal", "::", "\<\"udist\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The specification \
+\\!\\(MultinormalDistribution[\\(\\(\\(\\({0.`, 0.`}\\)\\), \
+\\(\\({\\(\\({0.5`, 1.`}\\)\\), \\(\\({1.`, 0.5`}\\)\\)}\\)\\)\\)\\)]\\) is \
+not a random distribution recognized by the system. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/RandomReal\\\", ButtonNote -> \
+\\\"RandomReal::udist\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MultinormalDistribution", "::", "\<\"cmdet\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The covariance matrix must have a non-negative \
+determinant. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MultivariateStatistics/ref/MultinormalDistribution\\\",\
+ ButtonNote -> \
+\\\"MultivariateStatistics`.`MultinormalDistribution::cmdet\\\"]\\)\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.574074408703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomReal", "::", "\<\"udist\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The specification \
+\\!\\(MultinormalDistribution[\\(\\(\\(\\({0.`, 0.`}\\)\\), \
+\\(\\({\\(\\({0.5`, 1.`}\\)\\), \\(\\({1.`, 0.5`}\\)\\)}\\)\\)\\)\\)]\\) is \
+not a random distribution recognized by the system. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/RandomReal\\\", ButtonNote -> \
+\\\"RandomReal::udist\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Covariance", "::", "\<\"arg1\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The first argument must be either a vector or a matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Covariance\\\", ButtonNote -> \
+\\\"Covariance::arg1\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MultinormalDistribution", "::", "\<\"cmdet\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The covariance matrix must have a non-negative \
+determinant. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MultivariateStatistics/ref/MultinormalDistribution\\\",\
+ ButtonNote -> \
+\\\"MultivariateStatistics`.`MultinormalDistribution::cmdet\\\"]\\)\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.574074408703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(MultinormalDistribution :: \
+\\\"cmdet\\\"\\) will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408703125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomReal", "::", "\<\"udist\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The specification \
+\\!\\(MultinormalDistribution[\\(\\(\\(\\({0.`, 0.`}\\)\\), \
+\\(\\({\\(\\({0.5`, 1.`}\\)\\), \\(\\({1.`, 0.5`}\\)\\)}\\)\\)\\)\\)]\\) is \
+not a random distribution recognized by the system. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/RandomReal\\\", ButtonNote -> \
+\\\"RandomReal::udist\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440871875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(RandomReal :: \\\"udist\\\"\\) \
+will be suppressed during this calculation. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440871875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Covariance", "::", "\<\"arg1\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The first argument must be either a vector or a matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Covariance\\\", ButtonNote -> \
+\\\"Covariance::arg1\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440871875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumr\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(2.718281828459045`\\^\\(g[\\(\\(\\(\\({x1, x2}\\)\\), \\(\\(Mean[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\), \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\), 0.9`\\)\\)]\\)\\) has evaluated to non-numerical \
+values for all sampling points in the region with boundaries \
+\\!\\({\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/inumr\\\", \
+ButtonNote -> \\\"NIntegrate::inumr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440871875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"inumr\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The integrand \
+\\!\\(2.718281828459045`\\^\\(g[\\(\\(\\(\\({x1, x2}\\)\\), \\(\\(Mean[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\), \\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\), 0.9`\\)\\)]\\)\\) has evaluated to non-numerical \
+values for all sampling points in the region with boundaries \
+\\!\\({\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\), \
+\\(\\({\\(\\(-\[Infinity]\\)\\), \\(\\(-31.`\\)\\)}\\)\\)}\\). \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/inumr\\\", \
+ButtonNote -> \\\"NIntegrate::inumr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.574074408796875*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(NIntegrate :: \\\"inumr\\\"\\) \
+will be suppressed during this calculation. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5740744088125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Covariance", "::", "\<\"arg1\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"The first argument must be either a vector or a matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Covariance\\\", ButtonNote -> \
+\\\"Covariance::arg1\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440909375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(Covariance :: \\\"arg1\\\"\\) will \
+be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57407440909375*^9}]
+}, Open  ]]
+},
+AutoGeneratedPackage->Automatic,
+WindowSize->{1431, 1178},
+WindowMargins->{{1, Automatic}, {-10, Automatic}},
+DockedCells->(FrontEndExecute[{
+   FrontEnd`NotebookApply[
+    FrontEnd`InputNotebook[], #, Placeholder]}]& ),
+ShowSelection->True,
+Magnification->2.,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 2140, 56, 296, "Input"],
+Cell[CellGroupData[{
+Cell[2733, 81, 15565, 426, 2070, "Input"],
+Cell[18301, 509, 509, 11, 43, "Message"],
+Cell[18813, 522, 560, 11, 78, "Message"],
+Cell[19376, 535, 408, 8, 43, "Message"],
+Cell[19787, 545, 508, 11, 43, "Message"],
+Cell[20298, 558, 559, 11, 78, "Message"],
+Cell[20860, 571, 3615, 64, 564, "Output"],
+Cell[24478, 637, 783, 14, 126, "Message"],
+Cell[25264, 653, 783, 14, 126, "Message"],
+Cell[26050, 669, 783, 14, 126, "Message"],
+Cell[26836, 685, 844, 15, 126, "Message"],
+Cell[27683, 702, 785, 14, 126, "Message"],
+Cell[28471, 718, 460, 9, 43, "Message"],
+Cell[28934, 729, 579, 9, 82, "Output"],
+Cell[29516, 740, 805, 14, 114, "Message"],
+Cell[30324, 756, 803, 14, 114, "Message"],
+Cell[31130, 772, 803, 14, 114, "Message"],
+Cell[31936, 788, 509, 11, 43, "Message"],
+Cell[32448, 801, 568, 11, 78, "Message"],
+Cell[33019, 814, 509, 11, 43, "Message"],
+Cell[33531, 827, 568, 11, 78, "Message"],
+Cell[34102, 840, 410, 8, 43, "Message"],
+Cell[34515, 850, 509, 11, 43, "Message"],
+Cell[35027, 863, 472, 9, 43, "Message"],
+Cell[35502, 874, 567, 11, 78, "Message"],
+Cell[36072, 887, 458, 9, 43, "Message"],
+Cell[36533, 898, 409, 8, 43, "Message"],
+Cell[36945, 908, 808, 14, 114, "Message"],
+Cell[37756, 924, 809, 14, 114, "Message"],
+Cell[38568, 940, 457, 9, 43, "Message"],
+Cell[39028, 951, 409, 8, 43, "Message"],
+Cell[39440, 961, 457, 9, 43, "Message"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
