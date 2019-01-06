@@ -35,27 +35,27 @@
 *   [IT 441 (Digital Image Processing)](ImageProcessing)
 *   [CS 251 (Software Engineering I)](SoftwareEngineeringI)
 
-## Call for Graduation Projects (Fall 2016)
+## Call for Graduation Projects, Fall 2019 (coming soon ISA)
 
-For interested students in my graduation projects of 2016-2017, this is a list of the projects I am
-going to supervise along with a list of [suggested readings](GP)
+<!-- For interested students in my graduation projects of 2016-2017, this is a list of the projects I am -->
+<!-- going to supervise along with a list of [suggested readings](GP) -->
 
 
-**1- CAD: Computer Aided Detection of breast cancer using Deep Learning**
+<!-- **1- CAD: Computer Aided Detection of breast cancer using Deep Learning** -->
 
-The objective is to leverage the new "deep learning" approach of pattern recognition to
-enhance the accuracy of the detection algorithms of breast cancer. The prerequisites courses
-for joining this project are: probability, pattern recognition, and image processing. To know
-about one of the CAD systems visits [LIBCAD](http://libcad.mesclabs.com).
+<!-- The objective is to leverage the new "deep learning" approach of pattern recognition to -->
+<!-- enhance the accuracy of the detection algorithms of breast cancer. The prerequisites courses -->
+<!-- for joining this project are: probability, pattern recognition, and image processing. To know -->
+<!-- about one of the CAD systems visits [LIBCAD](http://libcad.mesclabs.com). -->
 
-**2- DV: Building a Grammar of Graphics for Data Visualization**
+<!-- **2- DV: Building a Grammar of Graphics for Data Visualization** -->
 
-This is a continuation on 2 previous graduation projects (2015 and 2016). To know about data
-visualization read (Chen, H{a}rdle, Unwin - 2008 - Handbook of data visualization). To know
-one of the interactive data visualization systems visit,
-e.g., [DVP](http://dvp.mesclabs.com). It is intended to continue on
-the graduation project of this year (2106) to build a complete Grammar of Graphics data
-visualization system (Wilkinson et al. - 2006 - The Grammar of Graphics).
+<!-- This is a continuation on 2 previous graduation projects (2015 and 2016). To know about data -->
+<!-- visualization read (Chen, H{a}rdle, Unwin - 2008 - Handbook of data visualization). To know -->
+<!-- one of the interactive data visualization systems visit, -->
+<!-- e.g., [DVP](http://dvp.mesclabs.com). It is intended to continue on -->
+<!-- the graduation project of this year (2106) to build a complete Grammar of Graphics data -->
+<!-- visualization system (Wilkinson et al. - 2006 - The Grammar of Graphics). -->
 
 
 * * *
