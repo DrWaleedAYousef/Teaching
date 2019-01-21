@@ -1,29 +1,25 @@
-<center>
+# Teaching Materials for [Dr. Waleed A. Yousef](http://www.wy.helwan.edu.eg)#
 
-## Teaching
-
-</center>
-
-## Fall 2018
+## Spring 2019
 
 **Office Hours:** by appointment (send an email).
 
 **Courses:**
 
-
-*   [CS 395: "Data Science I": metro-rider snapshots of 15-course field](DataScience)
-*   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
+*   [CS 396: Data Science II (Advanced Pattern Recognition)](PatternRecognition)
+*   [IT 496: Data Science IV (Advanced Pattern Recognition)](PatternRecognition)
 
 ## Previous Semesters:
 
 **Courses On [Open-Course-Ware (recording completed)](http://www.youtube.com/fcihocw):**
 
-*   [IT 342: Pattern Recognition](PatternRecognition)
 *   [MA 112: Discrete Mathematics I (logic, basics, and foundations)](DiscreteMathematics)
 *   [CS 214: Data Structures](DataStructures)
 *   [ST 121: Probability](ProbStatI)
+*   [CS 395: "Data Science I": metro-rider snapshots of 15-course field](DataScience)
+*   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
 
-**Courses On [Open-Course-Ware (still recording)](http://www.youtube.com/fcihocw) :**
+**Courses On [Open-Course-Ware (still recording)](http://www.youtube.com/fcihocw):**
 
 *   [CS 495: Data Visualization](DataVisualization)
 *   [MA 214: Linear Algebra](LinearAlgebra)
