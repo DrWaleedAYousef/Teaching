@@ -1,4 +1,4 @@
-# Teaching Materials for [Dr. Waleed A. Yousef](http://www.wy.helwan.edu.eg)#
+# Teaching Materials for [Dr. Waleed A. Yousef](http://www.wy.helwan.edu.eg)
 
 ## Spring 2019
 
@@ -6,8 +6,8 @@
 
 **Courses:**
 
-*   [CS 396: Data Science II (Advanced Pattern Recognition)](PatternRecognition)
-*   [IT 496: Data Science IV (Advanced Pattern Recognition)](PatternRecognition)
+*   [CS 396: Data Science II (Pattern Recognition)](PatternRecognition)
+*   [CS 496: Data Science IV (More Advanced Pattern Recognition)](PatternRecognition)
 
 ## Previous Semesters:
 
@@ -52,6 +52,3 @@
 <!-- e.g., [DVP](http://dvp.mesclabs.com). It is intended to continue on -->
 <!-- the graduation project of this year (2106) to build a complete Grammar of Graphics data -->
 <!-- visualization system (Wilkinson et al. - 2006 - The Grammar of Graphics). -->
-
-
-* * *
