@@ -22,26 +22,28 @@
     *   Chapter 4: 6, 7, 12, 14, 31.
     *   Chapter 6: 3
     *   Chapter 7: 1
-    *   [HW1](Assignments/Prob1.pdf), [HW2](Assignments/Prob3.pdf), and [HW3](Assignments/HW2.pdf)
+    *   Probability HWs from [here](Assignments)
 2.  Review the basics of Data Visualization
 
 *   [Visualization Code](Code/Code-By-TAs)
 
 4.  Review the basics of Linear Algebra
-    *   Chapter 1:  
-        Sec 1.1: 1 , 2, 4, 7, 13.  
+    *   Chapter 1:
+        Sec 1.1: 1 , 2, 4, 7, 13.
         Sec 1.2: 1,3,4.
-    *   Chapter 4:  
+    *   Chapter 4:
         Sec 4.2: 1,11.
 5.  Review the basics of Multivariate Probability and Statistics
     *   [Multivariate Example](Code/Code-By-TAs)
 
+6. Review some basics of Calculus and solve optimization problems from [here](Assignments).
+
 ## Suggested Projects
 
-coming soon  
+coming soon
 
 ## **Announcements**
 
-Please, find here [samples for exams.](Exams)  
+Please, find here [samples for exams.](Exams)
 
 * * *
