@@ -22,7 +22,7 @@
     *   Chapter 4: 6, 7, 12, 14, 31.
     *   Chapter 6: 3
     *   Chapter 7: 1
-    *   Probability HWs from [here](Assignments)
+    *   Probability HWs from [Assignments](Assignments)
 2.  Review the basics of Data Visualization
 
 *   [Visualization Code](Code/Code-By-TAs)
@@ -36,7 +36,7 @@
 5.  Review the basics of Multivariate Probability and Statistics
     *   [Multivariate Example](Code/Code-By-TAs)
 
-6. Review some basics of Calculus and solve optimization problems from [here](Assignments).
+6. Review some basics of Calculus and solve optimization problems from [Assignments](Assignments).
 
 ## Suggested Projects
 
