@@ -7,7 +7,7 @@
 ## Resources
 
 *   [Course syllabus](CourseSyllabus.pdf).
-*   [Video Lectures.](https://www.youtube.com/playlist?list=PLoK2Lr1miEm_i9nfAPmcX_TRo7Wg8R7f3)
+*   [Video Lectures.](https://www.youtube.com/playlist?list=PLoK2Lr1miEm_Y3uZXLCPywdXL5oqKe7d3)
 *   [Lecture Notes](LectureNotes/)
 *   [Code and Programs](Code)
 
