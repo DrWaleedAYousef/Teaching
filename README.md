@@ -2,7 +2,7 @@
 
 ## Spring 2019
 
-**Office Hours:** by appointment (send an email).
+**Office Hours:** Wed. 12pm--4pm and by appointment (send an email).
 
 **Courses:**
 
@@ -16,8 +16,8 @@
 *   [MA 112: Discrete Mathematics I (logic, basics, and foundations)](DiscreteMathematics)
 *   [CS 214: Data Structures](DataStructures)
 *   [ST 121: Probability](ProbStatI)
-*   [CS 395: "Data Science I": metro-rider snapshots of 15-course field](DataScience)
-*   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
+*   [CS 395: Data Science I: metro-rider snapshots of 15-course field](DataScience)
+
 
 **Courses On [Open-Course-Ware (still recording)](http://www.youtube.com/fcihocw):**
 
@@ -25,6 +25,7 @@
 *   [MA 214: Linear Algebra](LinearAlgebra)
 *   [CS 221: Digital Design](DigitalDesign)
 *   [ST 122: Statistics](ProbStatII)
+*   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
 
 **Other Courses:**
 

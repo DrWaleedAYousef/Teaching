@@ -1,0 +1,36 @@
+\begin{tikzpicture}[scale=0.32]
+  \begin{axis}[
+    3d box,
+    width=15cm,
+    view={25}{25},
+    enlargelimits=false,
+    grid=major,
+    domain=-6:6,
+    y domain=-6:6,
+    samples=21,
+    xlabel=$x_1$,
+    ylabel=$x_2$,
+    zlabel={$f$}
+    ]
+
+    \addplot3 [y domain = -6:6, surf, opacity=0.5, faceted color = yellow] {(x-1)^2+y-2};
+
+    \addplot3 [y domain = -6:6, contour gnuplot = {levels={-0.25},number=14, labels={false}, draw color = black}, samples = 50]
+    {(x-1)^2+y-2};
+
+    % \addplot3 [y domain = -5:5, contour gnuplot = {number=14, draw color = black}, samples = 50]
+    % {(x-1)^2+y-2};
+
+    % \addplot3[surf, opacity = 0.5, samples =2] {1};
+
+    \addplot3 [contour gnuplot = {levels={1,-0.25,-2.5}, number=14, labels={false}, draw
+      color=black}, samples=50, z filter/.code={\def\pgfmathresult{60}}] {(x-1)^2+y-2};
+
+    \addplot3+ [samples=20, no markers, color = red] (x,1+x,60);
+
+    \addplot3+ [samples=20, no markers, color=red] (x,2-x,60);
+
+
+  \end{axis}
+\end{tikzpicture}
+
