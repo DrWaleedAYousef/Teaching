@@ -26,6 +26,7 @@
 *   [CS 221: Digital Design](DigitalDesign)
 *   [ST 122: Statistics](ProbStatII)
 *   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
+*   [CS 395: Optimization](Optimization)
 
 **Other Courses:**
 
