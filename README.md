@@ -15,7 +15,7 @@
 
 *   [MA 112: Discrete Mathematics I (logic, basics, and foundations)](DiscreteMathematics)
 *   [CS 214: Data Structures](DataStructures)
-*   [ST 121: Probability](ProbStatI)
+*   [ST 121: Probability](Probability)
 *   [CS 395: Data Science I: metro-rider snapshots of 15-course field](DataScience)
 
 
@@ -24,7 +24,7 @@
 *   [CS 495: Data Visualization](DataVisualization)
 *   [MA 214: Linear Algebra](LinearAlgebra)
 *   [CS 221: Digital Design](DigitalDesign)
-*   [ST 122: Statistics](ProbStatII)
+*   [ST 122: Statistics](Statistics)
 *   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
 *   [CS 395: Optimization](Optimization)
 
