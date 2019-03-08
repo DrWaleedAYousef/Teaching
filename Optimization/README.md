@@ -14,6 +14,8 @@
 
 ## Assignments
 
+*  OP03: the following problems from text: 2.2, 2.4, 2.5, 2.12, 2.15, 2.16.
+
 1. Review some basics of Calculus and solve optimization problems from [Assignments](Assignments).
 
 ## **Announcements**
