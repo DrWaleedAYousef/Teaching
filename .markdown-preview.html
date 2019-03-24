@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Markdown preview</title>
+    <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <script>
+     (function($, undefined) {
+         var socket = new WebSocket("ws://localhost:7379");
+         socket.onopen = function() {
+             console.log("Connection established.");
+	     socket.send("MDPM-Register-UUID: 5083f1cd-408a-4360-be46-896b0164e15c");
+         };
+         socket.onclose = function(event) {
+             if (event.wasClean) {
+                 console.log('Connection closed gracefully.');
+             } else {
+                 console.log('Connection terminated.');
+             }
+             console.log('Code: ' + event.code + ' reason: ' + event.reason);
+         };
+         socket.onmessage = function(event) {
+             $("#markdown-body").html($(event.data).find("#content").html()).trigger('mdContentChange');
+             var scroll = $(document).height() * ($(event.data).find("#position-percentage").html() / 100);
+             $("html, body").animate({ scrollTop: scroll }, 600);
+         };
+         socket.onerror = function(error) {
+             console.log("Error: " + error.message);
+         };
+     })(jQuery);
+    </script>
+  </head>
+  <body>
+    <article id="markdown-body" class="markdown-body">
+      <p>Markdown preview</p>
+    </article>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 <center>
 
-## Elective IV
+## Image Processing
 
 </center>
 
@@ -8,8 +8,7 @@
 
 *   [Course syllabus](CourseSyllabus.pdf).
 *   [Link to book webpage](http://www.ImageProcessingPlace.com), where you you can download all the figures, images, projects, and other good materials.
-*   My lecture notes to accompany the book: [Ch1.](Lectures/Ch1.pdf), [Ch2.](Lectures/Ch2.pdf), [Ch3.](Lectures/Ch3.pdf), [Ch4.](Lectures/Ch4.pdf)
-
+*   [Lecture Notes](LectureNotes/)
 ## Assignments
 
 1.  *   Read Ch. 1 in both DIP and DIPUM.
@@ -28,6 +27,7 @@
 8.  [Solve this on Fourier](HWFourier2.pdf)
 9.  Find the Fourier Transform (both magnitude and phase) of the delta function, sin, and cos. Also solve problem 4.1
 10.  Prove that the Fourier Transform of a Comb function, with period T, is another Comb function (what is its period)? Find the Fourier Transform of a periodic square function with width W and period T. Solve Prob. 4.7
+
 
 ## Announcements
 

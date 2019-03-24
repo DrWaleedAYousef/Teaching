@@ -16,11 +16,10 @@
 *   [MA 112: Discrete Mathematics I (logic, basics, and foundations)](DiscreteMathematics)
 *   [CS 214: Data Structures](DataStructures)
 *   [ST 121: Probability](Probability)
-*   [CS 395: Data Science I: metro-rider snapshots of 15-course field](DataScience)
-
 
 **Courses On [Open-Course-Ware (still recording)](http://www.youtube.com/fcihocw):**
 
+*   [CS 395: Data Science I: metro-rider snapshots of 15-course field](DataScience)
 *   [CS 495: Data Visualization](DataVisualization)
 *   [MA 214: Linear Algebra](LinearAlgebra)
 *   [CS 221: Digital Design](DigitalDesign)
@@ -28,7 +27,7 @@
 *   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
 *   [CS 395: Optimization](Optimization)
 
-**Other Courses:**
+**Other Courses:** (not recorded yet)
 
 *   [IT 441 (Digital Image Processing)](ImageProcessing)
 *   [CS 251 (Software Engineering I)](SoftwareEngineeringI)
