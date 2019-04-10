@@ -18,6 +18,7 @@
 2. [OP02](Assignments): optimization SW.
 3. [OP03](Assignments): convex and affine combinations.
 4. OP04: the following problems from Ch2: 2, 4, 5, , 6, 7, 12, 15, 16.
+5. [OP05](Assignments): norms, metrics, and loss.
 
 ## **Announcements**
 
