@@ -1,5 +1,4 @@
-# Teaching Materials for [Dr. Waleed A. Yousef](http://www.wy.helwan.edu.eg)
-
+<!-- # Teaching Materials for [Dr. Waleed A. Yousef](http://www.wy.helwan.edu.eg) -->
 ## Spring 2019
 
 **Office Hours:** Wed. 12pm--4pm and by appointment (send an email).
