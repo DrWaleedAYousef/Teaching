@@ -1,14 +1,13 @@
 <!-- # Teaching Materials for [Dr. Waleed A. Yousef](http://www.wy.helwan.edu.eg) -->
-## Spring 2019
+<!-- ## Spring 2019 -->
 
-**Office Hours:** Wed. 12pm--4pm and by appointment (send an email).
+<!-- **Office Hours:** Wed. 12pm--4pm and by appointment (send an email). -->
 
-**Courses:**
+<!-- **Courses:** -->
 
-*   [CS 396: Data Science II (Pattern Recognition)](PatternRecognition)
-*   [CS 496: Data Science IV (More Advanced Pattern Recognition)](PatternRecognition)
+<!-- *   [CS 496: Data Science IV (More Advanced Pattern Recognition)](PatternRecognition) -->
 
-## Previous Semesters:
+# All Courses #
 
 **Courses On [Open-Course-Ware (recording completed)](http://www.youtube.com/fcihocw):**
 
@@ -18,12 +17,12 @@
 
 **Courses On [Open-Course-Ware (still recording)](http://www.youtube.com/fcihocw):**
 
-*   [CS 395: Data Science I: metro-rider snapshots of 15-course field](DataScience)
-*   [CS 495: Data Visualization](DataVisualization)
+*   [ST 122: Statistics](Statistics)
 *   [MA 214: Linear Algebra](LinearAlgebra)
 *   [CS 221: Digital Design](DigitalDesign)
-*   [ST 122: Statistics](Statistics)
-*   [CS 495: Data Science III (Advanced Pattern Recognition)](PatternRecognition)
+*   [CS 495: Data Visualization](DataVisualization)
+*   [CS 395: Data Science I: metro-rider snapshots of 15-course field](DataScience)
+*   [CS 396: Data Science II (Pattern Recognition)](PatternRecognition)
 *   [CS 395: Optimization](Optimization)
 
 **Other Courses:** (not recorded yet)
@@ -31,7 +30,21 @@
 *   [IT 441 (Digital Image Processing)](ImageProcessing)
 *   [CS 251 (Software Engineering I)](SoftwareEngineeringI)
 
-## Call for Graduation Projects, Fall 2019 (coming soon ISA)
+
+# Citation #
+Please, use the following citation when you use my lecture notes:
+
+```
+@Misc{Yousef2009LectureNotesComputerScience,
+  author =       {Waleed A. Yousef},
+  title =        {Lecture Notes in Computer Science: mathematics and intuition},
+  year =         2009,
+  url =          {https://github.com/DrWaleedAYousef/Teaching}
+}
+```
+
+
+<!-- ## Call for Graduation Projects, Fall 2019 (coming soon ISA) -->
 
 <!-- For interested students in my graduation projects of 2016-2017, this is a list of the projects I am -->
 <!-- going to supervise along with a list of [suggested readings](GP) -->
