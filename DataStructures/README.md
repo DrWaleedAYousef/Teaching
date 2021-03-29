@@ -7,7 +7,7 @@
 ## Resources
 
 *   [Syllabus](Syllabus.pdf)
-*   [Video Lectures on YouTube Channel.](http://www.youtube.com/course?list=ECoK2Lr1miEm-5zCzKE8siQezj9rvQlnca)
+*   [Video Lectures on YouTube Channel.](https://www.youtube.com/playlist?list=PLoK2Lr1miEm-5zCzKE8siQezj9rvQlnca)
 *   [Lecture Notes](LectureNotes). (Some equations may not be viewed correctly until you install some Mathematical fonts. You may install the trial version of [MathType](http://www.dessci.com/en/products/mathtype/) to get these fonts)
 *   [Code and Programs](Code).
 *   [Important texts](ImportantTexts.pdf) in C language, algorithms, and data structures.
