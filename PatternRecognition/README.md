@@ -13,7 +13,7 @@
 ## Resources
 
 *   [Course syllabus](CourseSyllabus.pdf).
-*   [Video Lectures.](http://www.youtube.com/course?list=ECoK2Lr1miEm9scZv7zSAMENjMhcMMH2cU)
+*   [Video Lectures.](https://www.youtube.com/playlist?list=PLoK2Lr1miEm9scZv7zSAMENjMhcMMH2cU)
 *   [Link to book webpage](http://www-stat.stanford.edu/~tibs/ElemStatLearn/index.html). (You can download it in pdf format!). Other two great references (not mandatory for the course) are [Duda, Hart, and Stork](http://rii.ricoh.com/~stork/DHS.html); and [Bishop.](http://research.microsoft.com/en-us/um/people/cmbishop/PRML/)
 *   [Lecture Notes](LectureNotes/)
 *   [Code and Programs](Code).
