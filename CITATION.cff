@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this leturenotes, please cite it as below."
+authors:
+- family-names: "Yousef"
+  given-names: "Waleed A."
+  orcid: "https://orcid.org/0000-0001-9669-7241"
+title: "Lecture Notes in Computer Science: mathematics and intuition"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2009
+url: "https://github.com/DrWaleedAYousef/Teaching"e
