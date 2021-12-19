@@ -39,7 +39,8 @@ Please, use the following citation when you use my lecture notes:
   author =       {Waleed A. Yousef},
   title =        {Lecture Notes in Computer Science: mathematics and intuition},
   year =         2009,
-  url =          {https://github.com/DrWaleedAYousef/Teaching}
+  url =          {https://github.com/DrWaleedAYousef/Teaching},
+  doi =          {10.5281/zenodo.1234}
 }
 ```
 
